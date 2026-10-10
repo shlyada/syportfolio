@@ -113,7 +113,7 @@
                     </div>
                 </div>
 
-                <!-- Clean Technical Summary Card (Replaced Developer Profile) -->
+                <!-- Clean Technical Summary Card -->
                 <div class="lg:col-span-4 flex justify-center">
                     <div class="relative w-full max-w-md">
                         <div class="rounded-2xl bg-slatecard border border-slateborder p-6 shadow-2xl space-y-4">
@@ -244,7 +244,7 @@
                     </div>
                 </div>
 
-                <!-- Project: WebXR Gallery & Drawing Studio (Updated with full details) -->
+                <!-- Project: WebXR Gallery & Drawing Studio -->
                 <div class="project-card group rounded-2xl bg-slatecard border border-slateborder overflow-hidden flex flex-col hover:border-gray-500 transition-all duration-300" data-category="xr">
                     <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
                         <div>
@@ -264,9 +264,14 @@
                                 <span class="bg-slatebg px-2 py-1 rounded">Node/Express</span>
                                 <span class="bg-slatebg px-2 py-1 rounded">Swagger</span>
                             </div>
-                            <button onclick="openModal('xr-gallery')" class="w-full py-2.5 rounded-xl bg-slatebg hover:bg-slateborder text-xs font-semibold text-white transition-all flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-eye"></i> View Full Architecture
-                            </button>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="openModal('xr-gallery')" class="py-2.5 rounded-xl bg-slatebg hover:bg-slateborder text-xs font-semibold text-white transition-all flex items-center justify-center gap-1.5">
+                                    <i class="fa-solid fa-eye"></i> Details
+                                </button>
+                                <a href="https://github.com/shlyada/XR-Gallery" target="_blank" class="py-2.5 rounded-xl bg-slatebg hover:bg-slateborder text-xs font-semibold text-white transition-all flex items-center justify-center gap-1.5">
+                                    <i class="fa-brands fa-github"></i> Repo
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -290,14 +295,19 @@
                                 <span class="bg-slatebg px-2 py-1 rounded">SQL</span>
                                 <span class="bg-slatebg px-2 py-1 rounded">Figma / Miro</span>
                             </div>
-                            <button onclick="openModal('discord-bot')" class="w-full py-2.5 rounded-xl bg-slatebg hover:bg-slateborder text-xs font-semibold text-white transition-all flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-eye"></i> View Technical Details
-                            </button>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="openModal('discord-bot')" class="py-2.5 rounded-xl bg-slatebg hover:bg-slateborder text-xs font-semibold text-white transition-all flex items-center justify-center gap-1.5">
+                                    <i class="fa-solid fa-eye"></i> Details
+                                </button>
+                                <a href="https://drive.google.com/drive/folders/1GdZkKtDEgv2gYyGVmXZSHGZrO_yayVy_?usp=drive_link" target="_blank" class="py-2.5 rounded-xl bg-slatebg hover:bg-slateborder text-xs font-semibold text-white transition-all flex items-center justify-center gap-1.5">
+                                    <i class="fa-brands fa-google-drive"></i> Files
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project: Corporate Virtual Gallery Platform -->
+                <!-- Project: Corporate Virtual Gallery Platform (VR Gallery) -->
                 <div class="project-card group rounded-2xl bg-slatecard border border-slateborder overflow-hidden flex flex-col hover:border-gray-500 transition-all duration-300" data-category="fullstack">
                     <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
                         <div>
@@ -316,9 +326,14 @@
                                 <span class="bg-slatebg px-2 py-1 rounded">RBAC</span>
                                 <span class="bg-slatebg px-2 py-1 rounded">Material UI</span>
                             </div>
-                            <button onclick="openModal('virtual-gallery')" class="w-full py-2.5 rounded-xl bg-slatebg hover:bg-slateborder text-xs font-semibold text-white transition-all flex items-center justify-center gap-2">
-                                <i class="fa-solid fa-eye"></i> View Architecture
-                            </button>
+                            <div class="grid grid-cols-2 gap-2">
+                                <button onclick="openModal('virtual-gallery')" class="py-2.5 rounded-xl bg-slatebg hover:bg-slateborder text-xs font-semibold text-white transition-all flex items-center justify-center gap-1.5">
+                                    <i class="fa-solid fa-eye"></i> Details
+                                </button>
+                                <a href="https://github.com/shlyada/Virtual-Gallery" target="_blank" class="py-2.5 rounded-xl bg-slatebg hover:bg-slateborder text-xs font-semibold text-white transition-all flex items-center justify-center gap-1.5">
+                                    <i class="fa-brands fa-github"></i> Repo
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -420,42 +435,46 @@
     <!-- Footer -->
     <footer class="py-8 bg-slate-950 border-t border-slateborder text-center text-xs text-gray-500">
         <div class="max-w-7xl mx-auto px-4">
-            <p>© 2026 Developer Portfolio • Modern Minimalist Engineering & Research</p>
+            <p>&copy; 2026 Personal Portfolio. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Interactive Modal Structure -->
-    <div id="project-modal" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
-        <div class="bg-slatecard border border-slateborder rounded-2xl max-w-3xl w-full p-6 sm:p-8 space-y-6 relative max-h-[90vh] overflow-y-auto">
+    <!-- Simple Modal Container -->
+    <div id="project-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm hidden p-4">
+        <div class="bg-slatecard border border-slateborder rounded-2xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6 relative shadow-2xl">
             <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-white p-2">
                 <i class="fa-solid fa-xmark text-xl"></i>
             </button>
-            <div id="modal-content">
-                <!-- Content populated via JS -->
+            <div id="modal-content" class="space-y-4 text-gray-300 text-sm">
+                <!-- Dynamically populated -->
             </div>
         </div>
     </div>
 
     <script>
-        // Mobile Navigation Toggle
-        const menuBtn = document.getElementById('mobile-menu-btn');
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => {
+        const menuIcon = document.getElementById('menu-icon');
+
+        mobileBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-xmark');
         });
 
-        // Project Category Filter
+        // Project Filtering
         const filterBtns = document.querySelectorAll('.filter-btn');
         const projectCards = document.querySelectorAll('.project-card');
 
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 filterBtns.forEach(b => {
-                    b.classList.remove('bg-white', 'text-slate-950');
-                    b.classList.add('bg-slatecard', 'text-gray-400');
+                    b.classList.remove('active', 'bg-white', 'text-slate-950');
+                    b.classList.add('bg-slatecard', 'text-gray-400', 'border', 'border-slateborder');
                 });
-                btn.classList.add('bg-white', 'text-slate-950');
-                btn.classList.remove('bg-slatecard', 'text-gray-400');
+                btn.classList.add('active', 'bg-white', 'text-slate-950');
+                btn.classList.remove('bg-slatecard', 'text-gray-400', 'border', 'border-slateborder');
 
                 const filter = btn.getAttribute('data-filter');
                 projectCards.forEach(card => {
@@ -468,104 +487,65 @@
             });
         });
 
-        // Interactive Modal Data with Detailed XR Gallery Documentation
+        // Modal Content Data
         const modalData = {
-            'xr-gallery': {
-                title: "XR Virtual Gallery & Drawing Studio",
-                badge: "Three.js + Node.js/Express + Swagger",
-                description: `
-                    <div class="space-y-4 text-sm text-gray-300">
-                        <p class="leading-relaxed">
-                            An interactive web-based XR gallery designed for exploring, viewing, creating, uploading, and managing digital artwork in an immersive spatial environment.
-                        </p>
-
-                        <div class="space-y-2">
-                            <h5 class="text-xs font-mono text-brand-400 uppercase font-semibold">1. Interactive 3D Virtual Art Gallery</h5>
-                            <p class="text-xs text-gray-300 leading-relaxed">
-                                Built with Three.js to transition digital art beyond 2D webpages into spatial experiences. Artwork is dynamically loaded from the backend rather than hard-coded, featuring dynamic selection, capacity limits, and instant deletion.
-                            </p>
-                        </div>
-
-                        <div class="space-y-2">
-                            <h5 class="text-xs font-mono text-brand-400 uppercase font-semibold">2. Integrated Drawing Studio</h5>
-                            <p class="text-xs text-gray-300 leading-relaxed">
-                                Features a browser-based canvas studio allowing users to create artwork directly in the browser and instantly publish it to the 3D gallery. Designed to transition smoothly into 3D/XR spatial painting.
-                            </p>
-                        </div>
-
-                        <div class="space-y-2">
-                            <h5 class="text-xs font-mono text-brand-400 uppercase font-semibold">3. WebXR & Spatial Interaction</h5>
-                            <p class="text-xs text-gray-300 leading-relaxed">
-                                Built with WebXR standards to prepare for VR/AR device compatibility, enabling future controller/hand interaction, spatial art placement, and 3D creation.
-                            </p>
-                        </div>
-
-                        <div class="space-y-2">
-                            <h5 class="text-xs font-mono text-brand-400 uppercase font-semibold">4. Node.js / Express Backend & Swagger API</h5>
-                            <p class="text-xs text-gray-300 leading-relaxed">
-                                Powered by an Express REST API documented with Swagger. Supports endpoints for retrieval, upload, deletion, image streaming, and health checks with persistent artwork storage.
-                            </p>
-                        </div>
-                    </div>
-                `,
-                tech: ["Three.js", "WebXR", "Node.js", "Express.js", "Swagger.io", "HTML5 Canvas", "REST API", "RBAC"]
-            },
-            'discord-bot': {
-                title: "Custom Discord Bot & DPD Pipeline",
-                badge: "Python + Agile Leadership",
-                description: `
-                    <p class="text-sm text-gray-300 leading-relaxed">
-                        Oversee technical architecture and end-to-end development of custom Discord utilities using Discord.py and SQL. Led cross-functional team through DPD Tollgate Stage 5, generating SOPs and training materials in Google Classroom.
-                    </p>
-                `,
-                tech: ["Python", "Discord.py", "SQLite", "Figma", "Agile Sprints", "Gantt Charts"]
-            },
-            'virtual-gallery': {
-                title: "Corporate Virtual Gallery Platform",
-                badge: "Full-Stack + Azure DevOps",
-                description: `
-                    <p class="text-sm text-gray-300 leading-relaxed">
-                        Architected RESTful APIs with Node.js and Swagger, incorporating Role-Based Access Control (RBAC). Deployed full-stack solution to production using Azure DevOps CI/CD pipelines in an Ubuntu Linux environment.
-                    </p>
-                `,
-                tech: ["React", "Material UI", "Node.js", "Swagger.io", "Azure DevOps", "RBAC"]
-            },
-            'olympiad': {
-                title: "USA Economics Olympiad",
-                badge: "Outreach & Incoming CTO",
-                description: `
-                    <p class="text-sm text-gray-300 leading-relaxed">
-                        Executed outreach to over 20 universities and secondary institutions, boosting participation by 5%. Secured 2+ strategic partnerships and redesigned primary website landing pages for optimized user engagement.
-                    </p>
-                `,
-                tech: ["Web Redesign", "Outreach Strategy", "Partnerships", "Technical Operations"]
-            }
+            'xr-gallery': `
+                <h3 class="text-xl font-bold text-white mb-2">XR Virtual Gallery & Studio Architecture</h3>
+                <p class="text-xs text-brand-400 font-mono mb-4">Tech Stack: Three.js, WebXR, Node.js/Express, Swagger</p>
+                <div class="space-y-3 text-xs leading-relaxed">
+                    <p><strong>Overview:</strong> An interactive web-based 3D gallery and browser Drawing Studio. Combines a virtual art gallery with a browser-based Drawing Studio and a backend API for dynamically storing and retrieving artwork.</p>
+                    <p><strong>Virtual Art Gallery:</strong> Built with Three.js. Artwork is dynamically loaded from the backend rather than hard-coded, supporting dynamic loading, multiple pieces, interactive selection, and persistent deletion/storage.</p>
+                    <p><strong>Drawing Studio:</strong> Built-in canvas studio for creating custom artwork directly in the browser and adding them instantly to the gallery. Designed to support future immersive XR interaction.</p>
+                    <p><strong>Backend API:</strong> Node.js/Express backend providing REST endpoints for retrieving, uploading, deleting artwork, and health checks.</p>
+                </div>
+            `,
+            'discord-bot': `
+                <h3 class="text-xl font-bold text-white mb-2">Custom Discord Bot & DPD Pipeline</h3>
+                <p class="text-xs text-brand-400 font-mono mb-4">Tech Stack: Python, Discord.py, SQL, Figma, Miro</p>
+                <div class="space-y-3 text-xs leading-relaxed">
+                    <p><strong>Leadership & Process:</strong> Led a cross-functional development team through 5+ DPD (Design Product Development) tollgate stages from conceptualization to deployment.</p>
+                    <p><strong>Engineering:</strong> Developed robust asynchronous bot commands using Discord.py with SQL database integration for state persistence and server moderation.</p>
+                    <p><strong>Documentation & Training:</strong> Created comprehensive Google Classroom onboarding modules and technical documentation for developer training.</p>
+                </div>
+            `,
+            'virtual-gallery': `
+                <h3 class="text-xl font-bold text-white mb-2">Corporate Virtual Gallery Platform (VR Gallery)</h3>
+                <p class="text-xs text-brand-400 font-mono mb-4">Tech Stack: Azure DevOps, Node.js, React, Material UI (MUI)</p>
+                <div class="space-y-3 text-xs leading-relaxed">
+                    <p><strong>Cloud Deployment:</strong> Orchestrated end-to-end CI/CD pipelines and deployment workflows utilizing Azure DevOps.</p>
+                    <p><strong>Backend Architecture:</strong> Built secure RESTful APIs with Node.js, featuring Role-Based Access Control (RBAC) and Swagger documentation.</p>
+                    <p><strong>Frontend Interface:</strong> Designed and implemented responsive, modern interfaces using React and Material UI.</p>
+                </div>
+            `,
+            'olympiad': `
+                <h3 class="text-xl font-bold text-white mb-2">USA Economics Olympiad Leadership</h3>
+                <p class="text-xs text-brand-400 font-mono mb-4">Role: Outreach Coordinator & Incoming CTO</p>
+                <div class="space-y-3 text-xs leading-relaxed">
+                    <p><strong>Outreach & Growth:</strong> Expanded national footprint by reaching out to 20+ universities, boosting program participation by 5%.</p>
+                    <p><strong>Technical Direction:</strong> Spearheaded website landing page redesigns and digital infrastructure updates as Incoming CTO.</p>
+                </div>
+            `
         };
 
         function openModal(id) {
-            const data = modalData[id];
-            if(!data) return;
-
-            const modalContent = document.getElementById('modal-content');
-            modalContent.innerHTML = `
-                <span class="px-2.5 py-1 rounded-md bg-slatebg text-brand-400 text-xs font-mono border border-slateborder">${data.badge}</span>
-                <h3 class="text-2xl font-bold text-white mt-3 mb-4">${data.title}</h3>
-                ${data.description}
-                <div class="space-y-2 mt-6">
-                    <h5 class="text-xs font-mono text-gray-400 uppercase">Technologies & Core Components:</h5>
-                    <div class="flex flex-wrap gap-2">
-                        ${data.tech.map(t => `<span class="bg-slatebg px-3 py-1 rounded-md border border-slateborder text-xs font-mono text-brand-400">${t}</span>`).join('')}
-                    </div>
-                </div>
-                <div class="pt-6 mt-6 border-t border-slateborder flex justify-end">
-                    <button onclick="closeModal()" class="px-5 py-2 rounded-xl bg-slatebg hover:bg-slateborder text-gray-200 text-sm font-semibold transition-all">Close</button>
-                </div>
-            `;
-            document.getElementById('project-modal').classList.remove('hidden');
+            const modal = document.getElementById('project-modal');
+            const content = document.getElementById('modal-content');
+            content.innerHTML = modalData[id] || '<p>Details coming soon.</p>';
+            modal.classList.remove('hidden');
         }
 
         function closeModal() {
-            document.getElementById('project-modal').classList.add('hidden');
+            const modal = document.getElementById('project-modal');
+            modal.classList.add('hidden');
+        }
+
+        // Close modal on background click
+        window.onclick = function(event) {
+            const modal = document.getElementById('project-modal');
+            if (event.target === modal) {
+                closeModal();
+            }
         }
     </script>
 </body>
+</html>
